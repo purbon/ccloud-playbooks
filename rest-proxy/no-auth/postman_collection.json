@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "5b81cf5e-29c5-489a-854b-67351bdb2f35",
+		"name": "Kafka Rest Proxy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consumers",
+			"item": [
+				{
+					"name": "Subscription",
+					"item": [
+						{
+							"name": "Subscribe",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.kafka.v2+json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"topics\": [\n        \"my.topic\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:18082/consumers/app/instances/my_consumer/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"consumers",
+										"app",
+										"instances",
+										"my_consumer",
+										"subscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.kafka.v2+json",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:18082/consumers/app/instances/my_consumer/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"consumers",
+										"app",
+										"instances",
+										"my_consumer",
+										"subscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.kafka.v2+json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"topics\": [\n        \"my.topic\"\n    ]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:18082/consumers/app/instances/my_consumer/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "18082",
+									"path": [
+										"consumers",
+										"app",
+										"instances",
+										"my_consumer",
+										"subscription"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.kafka.avro.v2+json",
+								"type": "default"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.kafka.v2+json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"my_consumer\",\n    \"format\": \"avro\",\n    \"auto.offset.reset\": \"earliest\",\n    \"auto.commit.enable\": \"false\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:18082/consumers/app",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "18082",
+							"path": [
+								"consumers",
+								"app"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:18082/consumers/app/instances/my_consumer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "18082",
+							"path": [
+								"consumers",
+								"app",
+								"instances",
+								"my_consumer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Records",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.kafka.avro.v2+json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:18082/consumers/app/instances/my_consumer/records?timeout=3000&max_bytes=300000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "18082",
+							"path": [
+								"consumers",
+								"app",
+								"instances",
+								"my_consumer",
+								"records"
+							],
+							"query": [
+								{
+									"key": "timeout",
+									"value": "3000"
+								},
+								{
+									"key": "max_bytes",
+									"value": "300000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Topics",
+			"item": [
+				{
+					"name": "CreateTopic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"topic_name\": \"my.topic\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:18082/v3/clusters/lkc-mvvmox/topics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "18082",
+							"path": [
+								"v3",
+								"clusters",
+								"lkc-mvvmox",
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Describe Topic",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.kafka.avro.v2+json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value_schema\": \"{\\\"name\\\":\\\"int\\\",\\\"type\\\": \\\"int\\\"}\",\n    \"records\": [\n        {\n            \"value\": 12\n        },\n        {\n            \"value\": 24,\n            \"partition\": 1\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:18082/v3/clusters/lkc-mvvmox/topics/my.topic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "18082",
+							"path": [
+								"v3",
+								"clusters",
+								"lkc-mvvmox",
+								"topics",
+								"my.topic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produce",
+			"item": [
+				{
+					"name": "Detailed Schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.kafka.avro.v2+json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value_schema\": \"{\\\"name\\\":\\\"int\\\",\\\"type\\\": \\\"int\\\"}\",\n    \"records\": [\n        {\n            \"value\": 12\n        },\n        {\n            \"value\": 24,\n            \"partition\": 1\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:18082/topics/my.topic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "18082",
+							"path": [
+								"topics",
+								"my.topic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SchemaID",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.kafka.avro.v2+json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value_schema_id\": 100015,\n    \"records\": [\n        {\n            \"value\": 12\n        },\n        {\n            \"value\": 24,\n            \"partition\": 1\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:18082/topics/my.topic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "18082",
+							"path": [
+								"topics",
+								"my.topic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DescribeCluster",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.kafka.avro.v2+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value_schema\": \"{\\\"name\\\":\\\"int\\\",\\\"type\\\": \\\"int\\\"}\",\n    \"records\": [\n        {\n            \"value\": 12\n        },\n        {\n            \"value\": 24,\n            \"partition\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:18082/v3/clusters/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"v3",
+						"clusters",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Acls",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.kafka.avro.v2+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value_schema\": \"{\\\"name\\\":\\\"int\\\",\\\"type\\\": \\\"int\\\"}\",\n    \"records\": [\n        {\n            \"value\": 12\n        },\n        {\n            \"value\": 24,\n            \"partition\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:18082/v3/clusters/lkc-mvvmox/acls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"v3",
+						"clusters",
+						"lkc-mvvmox",
+						"acls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAcl",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resource_type\": \"CLUSTER\",\n    \"resource_name\": \"kafka-cluster\",\n    \"pattern_type\": \"LITERAL\",\n    \"principal\": \"User:alice\",\n    \"host\": \"*\",\n    \"operation\": \"DESCRIBE\",\n    \"permission\": \"DENY\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:18082/v3/clusters/lkc-mvvmox/acls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"v3",
+						"clusters",
+						"lkc-mvvmox",
+						"acls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAcl",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": [\n        {\n            \"cluster_id\": \"lkc-mvvmox\",\n            \"resource_type\": \"CLUSTER\",\n            \"resource_name\": \"kafka-cluster\",\n            \"pattern_type\": \"LITERAL\",\n            \"principal\": \"alice\",\n            \"host\": \"*\",\n            \"operation\": \"DESCRIBE\",\n            \"permission\": \"DENY\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:18082/v3/clusters/lkc-mvvmox/acls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"v3",
+						"clusters",
+						"lkc-mvvmox",
+						"acls"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
