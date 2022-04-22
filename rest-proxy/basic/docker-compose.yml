@@ -1,0 +1,77 @@
+---
+version: '3.5'
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:${TAG}
+    hostname: zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  broker:
+    image: confluentinc/cp-server:${TAG}
+    hostname: broker
+    container_name: broker
+    depends_on:
+      - zookeeper
+    ports:
+      - "29092:29092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CONFLUENT_LICENSE_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_METRIC_REPORTERS: io.confluent.metrics.reporter.ConfluentMetricsReporter
+      CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 3
+      KAFKA_DEFAULT_REPLICATION_FACTOR: 1
+
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: broker:9092
+      CONFLUENT_METRICS_REPORTER_SECURITY_PROTOCOL: PLAINTEXT
+      CONFLUENT_METRICS_REPORTER_MAX_REQUEST_SIZE: 10485760
+      CONFLUENT_METRICS_REPORTER_TOPIC_CREATE: 'true'
+      CONFLUENT_TELEMETRY_ENABLED: 'false'
+
+  krest:
+    image: confluentinc/cp-kafka-rest:${TAG}
+    hostname: krest
+    container_name: krest
+    depends_on:
+      - broker
+    volumes:
+      - "$PWD/krest:/etc/kafka-rest"
+    ports:
+      - 18082:18082
+    environment:
+      KAFKA_REST_LISTENERS: 'http://0.0.0.0:18082'
+      KAFKA_REST_LOG4J_ROOT_LOGLEVEL: "INFO"
+      KAFKA_REST_LOG4J_LOGGERS: "io.confluent.kafkarest.resources.v2=INFO"
+      KAFKA_REST_BOOTSTRAP_SERVERS: ${KAFKA_SERVER}
+      KAFKA_REST_SECURITY_PROTOCOL: SASL_SSL
+      KAFKA_REST_SASL_JAAS_CONFIG: |
+            org.apache.kafka.common.security.plain.PlainLoginModule required \
+            username="${KAFKA_API_KEY}" \
+            password="${KAFKA_API_SECRET}";
+
+      KAFKA_REST_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM: https
+      KAFKA_REST_SASL_MECHANISM: PLAIN
+      KAFKA_REST_CLIENT_BOOTSTRAP_SERVERS: ${KAFKA_SERVER}
+      KAFKA_REST_CLIENT_SECURITY_PROTOCOL: SASL_SSL
+      KAFKA_REST_CLIENT_SASL_JAAS_CONFIG: |
+            org.apache.kafka.common.security.plain.PlainLoginModule required \
+            username="${KAFKA_API_KEY}" \
+            password="${KAFKA_API_SECRET}";
+
+      KAFKA_REST_CLIENT_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM: https
+      KAFKA_REST_CLIENT_SASL_MECHANISM: PLAIN
+      # Confluent Cloud Schema Registry
+      KAFKA_REST_SCHEMA_REGISTRY_URL: ${SR_SERVER}
+      KAFKA_REST_CLIENT_BASIC_AUTH_CREDENTIALS_SOURCE: USER_INFO
+      KAFKA_REST_CLIENT_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO: ${SR_API_KEY}:${SR_API_SECRET}
