@@ -1,0 +1,4 @@
+*.jar
+config.properties
+.cluster-state
+logs/
