@@ -1,0 +1,42 @@
+scrape_configs:
+  - job_name: Confluent Cloud
+    scrape_interval: 30s
+    scrape_timeout: 1m
+    honor_timestamps: true
+    static_configs:
+      - targets:
+        - api.telemetry.confluent.cloud
+    scheme: https
+    basic_auth:
+      username: $CCLOUD_API_KEY
+      password: $CCLOUD_API_SECRET
+    metrics_path: /v2/metrics/cloud/export
+    params:
+      "resource.kafka.id":
+        - lkc-rxr89
+        - lkc-z07d0
+        - lkc-dqgmz
+        - lkc-ropy7
+        - lkc-65dr6
+        - lkc-n15nv
+        - lkc-rxyd7
+        - lkc-w77y2m
+        - lkc-jkz1m
+        - lkc-577702
+        - lkc-o327py
+      "resource.schema_registry.id":
+        - lsrc-2vo02
+        - lsrc-36z8j
+        - lsrc-9dg15
+        - lsrc-d0qm1
+        - lsrc-dwnno
+        - lsrc-g0pqm
+        - lsrc-o5ogx
+        - lsrc-ogpnj
+        - lsrc-q21qvp
+        - lsrc-yx0po
+      "resource.ksql.id":
+        - lksqlc-577zrq
+      "resource.connector.id":
+        - lcc-6kk782
+        - lcc-7yyo5w
