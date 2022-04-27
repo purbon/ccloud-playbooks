@@ -7,6 +7,7 @@ services:
     container_name: krest
     volumes:
       - "./krest:/etc/kafka-rest"
+      - "./krest-auth:/etc/krest-auth"
     ports:
       - 18082:18082
     environment:
@@ -36,3 +37,8 @@ services:
       KAFKA_REST_CLIENT_BASIC_AUTH_CREDENTIALS_SOURCE: USER_INFO
       KAFKA_REST_CLIENT_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO: ${SR_API_KEY}:${SR_API_SECRET}
       KAFKA_REST_CONFLUENT_REST_AUTH_PROPAGATE_METHOD: JETTY_AUTH
+      KAFKA_REST_KAFKA_REST_RESOURCE_EXTENSION_CLASS: io.confluent.kafkarest.security.KafkaRestSecurityResourceExtension
+      KAFKA_REST_AUTHENTICATION_METHOD: BASIC
+      KAFKA_REST_AUTHENTICATION_REALM: KafkaRest
+      KAFKA_REST_AUTHENTICATION_ROLES: myrole
+      KAFKAREST_OPTS: -Djava.security.auth.login.config=/etc/krest-auth/rest-jaas.properties
