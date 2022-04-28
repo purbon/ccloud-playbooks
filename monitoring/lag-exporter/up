@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+docker-compose up -d --build
+
+docker exec broker kafka-topics --bootstrap-server broker:9092 --create --topic foo --partitions 1 --replication-factor 1
+docker exec broker kafka-topics --bootstrap-server broker:9092 --create --topic bar --partitions 1 --replication-factor 1

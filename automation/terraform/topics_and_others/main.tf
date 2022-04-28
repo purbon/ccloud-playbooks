@@ -17,7 +17,7 @@ data "confluentcloud_environment" "purbon" {
 }
 
 data "confluentcloud_kafka_cluster" "basic-cluster" {
-  id = "lkc-9kwjny"
+  id = "lkc-223xxq"
   environment {
     id = data.confluentcloud_environment.purbon.id
   }
@@ -33,6 +33,22 @@ resource "confluentcloud_service_account" "my_sa" {
 resource "confluentcloud_kafka_topic" "orders" {
   kafka_cluster = data.confluentcloud_kafka_cluster.basic-cluster.id
   topic_name = "orders"
+  partitions_count = 40
+  http_endpoint = data.confluentcloud_kafka_cluster.basic-cluster.http_endpoint
+  config = {
+    "cleanup.policy" = "compact"
+    "max.message.bytes" = "12345"
+    "retention.ms" = "67890"
+  }
+  credentials {
+    key = var.api_key
+    secret = var.api_secret
+  }
+}
+
+resource "confluentcloud_kafka_topic" "mas_orders" {
+  kafka_cluster = data.confluentcloud_kafka_cluster.basic-cluster.id
+  topic_name = "menos.orders"
   partitions_count = 4
   http_endpoint = data.confluentcloud_kafka_cluster.basic-cluster.http_endpoint
   config = {
