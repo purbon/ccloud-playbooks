@@ -2,3 +2,4 @@
 config.properties
 .cluster-state
 logs/
+config2.properties
