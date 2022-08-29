@@ -154,6 +154,28 @@ resource "aws_security_group" "ssh" {
     }
   }
 
+  dynamic "ingress" {
+    for_each = local.myip-cidrs
+    content {
+      from_port = 9092
+      to_port = 9092
+      protocol = "TCP"
+      self = true
+      cidr_blocks = ["${ingress.value}"]
+    }
+  }
+
+  dynamic "ingress" {
+    for_each = local.myip-cidrs
+    content {
+      from_port = 443
+      to_port = 443
+      protocol = "TCP"
+      self = true
+      cidr_blocks = ["${ingress.value}"]
+    }
+  }
+
   # ssh from anywhere
   ingress {
       from_port = 22

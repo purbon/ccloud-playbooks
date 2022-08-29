@@ -8,35 +8,12 @@ scrape_configs:
         - api.telemetry.confluent.cloud
     scheme: https
     basic_auth:
-      username: 4OWFXB6K3RGYB5VD
-      password: 6l5oHs5P90ijkHevEbHt3GymiXuAM8VAbHetwkslV0ZUVMQ0uqsQ3cZylT3yxFx8
+      username: TXHMfake2EX4OV
+      password: +Y7PcbeB6Io2fakeS8kwRy8AsYaWfs
     metrics_path: /v2/metrics/cloud/export
     params:
       "resource.kafka.id":
-        - lkc-rxr89
-        - lkc-z07d0
-        - lkc-dqgmz
-        - lkc-ropy7
-        - lkc-65dr6
-        - lkc-n15nv
-        - lkc-rxyd7
-        - lkc-w77y2m
-        - lkc-jkz1m
         - lkc-577702
-        - lkc-o327py
+        - lkc-jkz1m
       "resource.schema_registry.id":
         - lsrc-2vo02
-        - lsrc-36z8j
-        - lsrc-9dg15
-        - lsrc-d0qm1
-        - lsrc-dwnno
-        - lsrc-g0pqm
-        - lsrc-o5ogx
-        - lsrc-ogpnj
-        - lsrc-q21qvp
-        - lsrc-yx0po
-      "resource.ksql.id":
-        - lksqlc-577zrq
-      "resource.connector.id":
-        - lcc-6kk782
-        - lcc-7yyo5w
