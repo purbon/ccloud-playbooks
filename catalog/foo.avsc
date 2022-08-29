@@ -1,0 +1,19 @@
+{
+        "namespace": "com.purbon.kafka.streams.model",
+        "name": "Card",
+        "type": "record",
+        "fields": [
+                { "name": "card_id",
+                  "type": "long"
+                },
+                { "name": "owner",
+                  "type": "string"
+                },
+                { "name": "code",
+                    "type": "string"
+                },
+                { "name": "token",
+                  "type": "int"
+                }
+            ]
+}

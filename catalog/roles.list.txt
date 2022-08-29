@@ -1,0 +1,1555 @@
+        Name        |                                 Access Policy                                   
+--------------------+---------------------------------------------------------------------------------
+  OrganizationAdmin | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Connector",                                            
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Peering",                                              
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Network",                                              
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "CreateEnvironment",                                                  
+                    |           "AlterAccess",                                                        
+                    |           "ReadQuotaLimit",                                                     
+                    |           "DescribeAccess",                                                     
+                    |           "ReadQuotaUsage"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "User",                                                 
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "ReadQuotaLimit",                                                     
+                    |           "DescribeAccess",                                                     
+                    |           "ReadQuotaUsage",                                                     
+                    |           "Invite"                                                              
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SecurityFederatedIdentity",                            
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe", "Alter", "AlterAccess", "DescribeAccess"]    
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Group",                                                
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamShare",                                          
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransitGatewayAttachment",                             
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterApiKey",                                        
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnSrClusterApiKey",                                   
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ServiceAccount",                                       
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "ReadQuotaLimit",                                                     
+                    |           "DescribeAccess",                                                     
+                    |           "ReadQuotaUsage"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SecuritySSO",                                          
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamLineage",                                        
+                    |         "operations": ["View"]                                                  
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkRegion",                                        
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ConsumerResource",                                     
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterMetric",                                        
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "HealthPlusCluster",                                    
+                    |         "operations": ["Alter", "Describe"]                                     
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Subject",                                              
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Billing",                                              
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SchemaRegistry",                                       
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ConsumerShare",                                        
+                    |         "operations": ["Delete", "Describe", "Create"]                          
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "PrivateLinkAccess",                                    
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "All",                                                  
+                    |         "operations": ["AlterAccess", "DescribeAccess"]                         
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKsqlClusterApiKey",                                 
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransactionalId",                                      
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Audit",                                                
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkAccess",                                        
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "CloudApiKey",                                          
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "ReadQuotaLimit",                                                     
+                    |           "DescribeAccess",                                                     
+                    |           "ReadQuotaUsage"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SecurityMetadata",                                     
+                    |         "operations": ["Alter", "Describe"]                                     
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkConfig",                                        
+                    |         "operations": ["All"]                                                   
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  EnvironmentAdmin  | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "NetworkRegion",                                        
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKsqlClusterApiKey",                                 
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Network",                                              
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkAccess",                                        
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterMetric",                                        
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "CreateCloudCluster",                                                 
+                    |           "ReadQuotaLimit",                                                     
+                    |           "DescribeAccess",                                                     
+                    |           "ReadQuotaUsage",                                                     
+                    |           "CreateSRCluster"                                                     
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Group",                                                
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Peering",                                              
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamShare",                                          
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterApiKey",                                        
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnSrClusterApiKey",                                   
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SecurityMetadata",                                     
+                    |         "operations": ["Alter", "Describe"]                                     
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransactionalId",                                      
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "All",                                                  
+                    |         "operations": ["AlterAccess", "DescribeAccess"]                         
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkConfig",                                        
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SchemaRegistry",                                       
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "AccessMetrics",                                                      
+                    |           "DescribeAccess",                                                     
+                    |           "AccessWithToken"                                                     
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransitGatewayAttachment",                             
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamLineage",                                        
+                    |         "operations": ["View"]                                                  
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "PrivateLinkAccess",                                    
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Subject",                                              
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Connector",                                            
+                    |         "operations": ["All"]                                                   
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ServiceAccount",                                       
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "User",                                                 
+                    |         "operations": ["Describe", "Create", "Invite"]                          
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  CloudClusterAdmin | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "cloud-cluster",                                            
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "CreateKsqlCluster",                                                  
+                    |           "ReadQuotaLimit",                                                     
+                    |           "CreateKafkaCluster",                                                 
+                    |           "DescribeAccess",                                                     
+                    |           "ReadQuotaUsage"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnSrClusterApiKey",                                   
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Group",                                                
+                    |         "operations": [                                                         
+                    |           "Read",                                                               
+                    |           "Describe",                                                           
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "All",                                                  
+                    |         "operations": ["AlterAccess", "DescribeAccess"]                         
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamShare",                                          
+                    |         "operations": [                                                         
+                    |           "Delete",                                                             
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKsqlClusterApiKey",                                 
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": [                                                         
+                    |           "Delete",                                                             
+                    |           "Read",                                                               
+                    |           "Write",                                                              
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeConfigs",                                                    
+                    |           "AlterConfigs",                                                       
+                    |           "DescribeAccess",                                                     
+                    |           "Share"                                                               
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamLineage",                                        
+                    |         "operations": ["View"]                                                  
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SecurityMetadata",                                     
+                    |         "operations": ["Alter", "Describe"]                                     
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterMetric",                                        
+                    |         "operations": ["Describe", "Read", "AlterAccess", "DescribeAccess"]     
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "AlterAccess",                                                        
+                    |           "AccessMetrics",                                                      
+                    |           "Contribute",                                                         
+                    |           "DescribeAccess",                                                     
+                    |           "AccessWithToken",                                                    
+                    |           "Terminate"                                                           
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Connector",                                            
+                    |         "operations": ["All"]                                                   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterApiKey",                                        
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransactionalId",                                      
+                    |         "operations": ["Write", "Describe", "AlterAccess", "DescribeAccess"]    
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Subject",                                              
+                    |         "operations": [                                                         
+                    |           "Read",                                                               
+                    |           "Write",                                                              
+                    |           "Delete",                                                             
+                    |           "ReadCompatibility",                                                  
+                    |           "AlterAccess",                                                        
+                    |           "WriteCompatibility",                                                 
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkAccess",                                        
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "Delete",                                                             
+                    |           "IdempotentWrite",                                                    
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "AccessMetrics",                                                      
+                    |           "DescribeConfigs",                                                    
+                    |           "AlterConfigs",                                                       
+                    |           "DescribeAccess",                                                     
+                    |           "View",                                                               
+                    |           "AccessWithToken"                                                     
+                    |         ]                                                                       
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "SchemaRegistry",                                       
+                    |         "operations": ["Describe", "AccessMetrics", "AccessWithToken"]          
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "User",                                                 
+                    |         "operations": ["Describe", "Create", "Invite"]                          
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ServiceAccount",                                       
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  MetricsViewer     | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Connector",                                            
+                    |         "operations": ["DescribeMetrics", "AccessMetrics", "AccessWithToken"]   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["AccessMetrics", "View", "AccessWithToken"]              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SchemaRegistry",                                       
+                    |         "operations": ["AccessMetrics", "AccessWithToken"]                      
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": ["AccessMetrics", "AccessWithToken"]                      
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  MetricsViewer     | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": ["Describe", "AccessMetrics", "AccessWithToken"]          
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamLineage",                                        
+                    |         "operations": ["View"]                                                  
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "HealthPlusCluster",                                    
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["Describe", "AccessMetrics", "View", "AccessWithToken"]  
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SchemaRegistry",                                       
+                    |         "operations": ["Describe", "AccessMetrics", "AccessWithToken"]          
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Connector",                                            
+                    |         "operations": ["Describe", "AccessMetrics", "AccessWithToken"]          
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  MetricsViewer     | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "cloud-cluster",                                            
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["AccessMetrics", "View", "AccessWithToken"]              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Connector",                                            
+                    |         "operations": ["DescribeMetrics", "AccessMetrics", "AccessWithToken"]   
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": ["AccessMetrics", "AccessWithToken"]                      
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  Operator          | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "cloud-cluster",                                            
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": ["Describe", "AccessMetrics"]                             
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Group",                                                
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterMetric",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": ["Describe", "DescribeConfigs"]                           
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterApiKey",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Connector",                                            
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "ReadStatus",                                                         
+                    |           "DescribePlugins",                                                    
+                    |           "Pause",                                                              
+                    |           "ReadLogs",                                                           
+                    |           "AccessMetrics",                                                      
+                    |           "ReadTasks",                                                          
+                    |           "AccessWithToken",                                                    
+                    |           "Resume"                                                              
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "AccessMetrics",                                                      
+                    |           "DescribeConfigs",                                                    
+                    |           "View",                                                               
+                    |           "AccessWithToken"                                                     
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamLineage",                                        
+                    |         "operations": ["View"]                                                  
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkAccess",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SchemaRegistry",                                       
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "User",                                                 
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ServiceAccount",                                       
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  Operator          | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "AccessMetrics",                                                      
+                    |           "DescribeConfigs",                                                    
+                    |           "View",                                                               
+                    |           "AccessWithToken"                                                     
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Network",                                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": ["Describe", "AccessMetrics"]                             
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamLineage",                                        
+                    |         "operations": ["View"]                                                  
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkConfig",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": ["Describe", "DescribeConfigs"]                           
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "CloudApiKey",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkAccess",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransactionalId",                                      
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Audit",                                                
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Connector",                                            
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "ReadStatus",                                                         
+                    |           "DescribePlugins",                                                    
+                    |           "Pause",                                                              
+                    |           "ReadLogs",                                                           
+                    |           "AccessMetrics",                                                      
+                    |           "ReadTasks",                                                          
+                    |           "AccessWithToken",                                                    
+                    |           "Resume"                                                              
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "PrivateLinkAccess",                                    
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Peering",                                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ServiceAccount",                                       
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterMetric",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransitGatewayAttachment",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Subject",                                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterApiKey",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Group",                                                
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SchemaRegistry",                                       
+                    |         "operations": ["Describe", "AccessMetrics"]                             
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "User",                                                 
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkRegion",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  Operator          | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "AccessMetrics",                                                      
+                    |           "DescribeConfigs",                                                    
+                    |           "View",                                                               
+                    |           "AccessWithToken"                                                     
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkConfig",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SchemaRegistry",                                       
+                    |         "operations": ["Describe", "AccessMetrics"]                             
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterApiKey",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": ["Describe", "AccessMetrics"]                             
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "PrivateLinkAccess",                                    
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Peering",                                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Connector",                                            
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "ReadStatus",                                                         
+                    |           "DescribePlugins",                                                    
+                    |           "Pause",                                                              
+                    |           "ReadLogs",                                                           
+                    |           "AccessMetrics",                                                      
+                    |           "ReadTasks",                                                          
+                    |           "AccessWithToken",                                                    
+                    |           "Resume"                                                              
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ClusterMetric",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Group",                                                
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": ["Describe", "DescribeConfigs"]                           
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkAccess",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Network",                                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransitGatewayAttachment",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Subject",                                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "StreamLineage",                                        
+                    |         "operations": ["View"]                                                  
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NetworkRegion",                                        
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ServiceAccount",                                       
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "User",                                                 
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  ResourceOwner     | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "cloud-cluster",                                            
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "cluster",                                                  
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "KsqlCluster",                                          
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "AlterAccess",                                                        
+                    |           "Contribute",                                                         
+                    |           "DescribeAccess",                                                     
+                    |           "Terminate"                                                           
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["View", "AccessWithToken"]                               
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "cluster",                                                  
+                    |     "bindWithResource": true,                                                   
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": [                                                         
+                    |           "Delete",                                                             
+                    |           "Read",                                                               
+                    |           "Write",                                                              
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeConfigs",                                                    
+                    |           "AlterConfigs",                                                       
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": [                                                         
+                    |           "Describe",                                                           
+                    |           "Alter",                                                              
+                    |           "IdempotentWrite",                                                    
+                    |           "AlterAccess",                                                        
+                    |           "Create",                                                             
+                    |           "DescribeConfigs",                                                    
+                    |           "AlterConfigs",                                                       
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Group",                                                
+                    |         "operations": [                                                         
+                    |           "Read",                                                               
+                    |           "Describe",                                                           
+                    |           "Delete",                                                             
+                    |           "AlterAccess",                                                        
+                    |           "DescribeAccess"                                                      
+                    |         ]                                                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransactionalId",                                      
+                    |         "operations": ["Write", "Describe", "AlterAccess", "DescribeAccess"]    
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "User",                                                 
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "ServiceAccount",                                       
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  DeveloperManage   | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "cloud-cluster",                                            
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "cluster",                                                  
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["View", "AccessWithToken"]                               
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "cluster",                                                  
+                    |     "bindWithResource": true,                                                   
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "TransactionalId",                                      
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["Create", "DescribeConfigs"]                             
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Group",                                                
+                    |         "operations": ["Describe", "Delete"]                                    
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": ["Delete", "Describe", "Create", "DescribeConfigs"]       
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  DeveloperRead     | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "cloud-cluster",                                            
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "cluster",                                                  
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["View", "AccessWithToken"]                               
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "cluster",                                                  
+                    |     "bindWithResource": true,                                                   
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Group",                                                
+                    |         "operations": ["Read", "Describe"]                                      
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransactionalId",                                      
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": ["Read", "Describe"]                                      
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 
+  DeveloperWrite    | [                                                                               
+                    |   {                                                                             
+                    |     "bindingScope": "cloud-cluster",                                            
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "CloudCluster",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "cluster",                                                  
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "OwnClusterApiKey",                                     
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "OwnKafkaClusterApiKey",                                
+                    |         "operations": ["Describe", "Alter", "Delete", "Create"]                 
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["View", "AccessWithToken"]                               
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "cluster",                                                  
+                    |     "bindWithResource": true,                                                   
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Topic",                                                
+                    |         "operations": ["Write", "Describe"]                                     
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "Cluster",                                              
+                    |         "operations": ["IdempotentWrite"]                                       
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "TransactionalId",                                      
+                    |         "operations": ["Write", "Describe"]                                     
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "environment",                                              
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Environment",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   },                                                                            
+                    |   {                                                                             
+                    |     "bindingScope": "organization",                                             
+                    |     "bindWithResource": false,                                                  
+                    |     "allowedOperations": [                                                      
+                    |       {                                                                         
+                    |         "resourceType": "Organization",                                         
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationIntegration",                              
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "NotificationSubscription",                             
+                    |         "operations": ["Describe"]                                              
+                    |       },                                                                        
+                    |       {                                                                         
+                    |         "resourceType": "SupportPlan",                                          
+                    |         "operations": ["Describe"]                                              
+                    |       }                                                                         
+                    |     ]                                                                           
+                    |   }                                                                             
+                    | ]                                                                               
+                    |                                                                                 

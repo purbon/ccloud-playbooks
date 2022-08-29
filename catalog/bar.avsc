@@ -1,0 +1,14 @@
+{
+        "namespace": "com.purbon.kafka.streams.model",
+        "name": "Store",
+        "type": "record",
+        "fields": [
+                {
+                  "name": "store_id",
+                  "type": "int"
+                },
+                { "name": "name",
+                  "type": "string"
+                }
+            ]
+}
