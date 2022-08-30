@@ -1,0 +1,23 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+<Public IP Address of VM instance> <bootstrapURL>
+
+1.2.3.4 lkc-w7x1z5-g0420p.eu-west-1.aws.glb.confluent.cloud
+1.2.3.4 lkaclkc-w7x1z5-g0420p.eu-west-1.aws.glb.confluent.cloud
+
+1.2.3.4 e-0240-euw1-az1-g0420p.eu-west-1.aws.glb.confluent.cloud
+1.2.3.4 e-2893-euw1-az3-g0420p.eu-west-1.aws.glb.confluent.cloud
+1.2.3.4 e-28be-euw1-az3-g0420p.eu-west-1.aws.glb.confluent.cloud
+1.2.3.4 e-2d4b-euw1-az3-g0420p.eu-west-1.aws.glb.confluent.cloud
+1.2.3.4 e-1cb8-euw1-az2-g0420p.eu-west-1.aws.glb.confluent.cloud
+1.2.3.4 e-17c7-euw1-az2-g0420p.eu-west-1.aws.glb.confluent.cloud
+1.2.3.4 e-06c7-euw1-az1-g0420p.eu-west-1.aws.glb.confluent.cloud
+1.2.3.4 e-1922-euw1-az2-g0420p.eu-west-1.aws.glb.confluent.cloud
+1.2.3.4 e-0c53-euw1-az1-g0420p.eu-west-1.aws.glb.confluent.cloud

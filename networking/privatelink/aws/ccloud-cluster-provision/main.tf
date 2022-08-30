@@ -7,35 +7,18 @@ terraform {
     }
     confluent = {
       source  = "confluentinc/confluent"
-      version = "0.10.0"
+      version = "1.2.0"
     }
   }
 }
 
-variable "aws_account_id" {
-  description = "The AWS Account ID (12 digits)"
-  type        = string
+provider "confluent" {
+  cloud_api_key    = var.confluent_cloud_api_key
+  cloud_api_secret = var.confluent_cloud_api_secret
 }
-
-variable "region" {
-  description = "The AWS Region of the existing VPC"
-  type        = string
-}
-
-variable "vpc_id" {
-  description = "The VPC ID to private link to Confluent Cloud"
-  type        = string
-}
-
-variable "subnets_to_privatelink" {
-  description = "A map of Zone ID to Subnet ID (i.e.: {\"use1-az1\" = \"subnet-abcdef0123456789a\", ...})"
-  type        = map(string)
-}
-
-provider "confluent" {}
 
 data "confluent_environment" "purbon" {
-  id = "env-j9wgp"
+  id = var.confluent_cloud_environment
 }
 
 resource "confluent_network" "private-link" {
@@ -43,6 +26,7 @@ resource "confluent_network" "private-link" {
   cloud            = "AWS"
   region           = var.region
   connection_types = ["PRIVATELINK"]
+  zones            = keys(var.subnets_to_privatelink)
   environment {
     id = data.confluent_environment.purbon.id
   }
