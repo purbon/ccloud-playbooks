@@ -15,6 +15,6 @@ resource "confluent_kafka_client_quota" "app" {
   }
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false 
   }
 }
