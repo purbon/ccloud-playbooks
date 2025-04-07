@@ -1,0 +1,15 @@
+---
+version: '2'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: proxy
+    ports:
+      - "29092:29092"
+      - "2443:2443"
+    environment:
+      - NGINX_ENTRYPOINT_QUIET_LOGS=0
+    volumes:
+      - ./config:/etc/nginx:ro
+      - ./logs:/var/log/nginx/
+    
